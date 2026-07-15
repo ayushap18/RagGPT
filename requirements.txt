@@ -1,3 +1,4 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
 streamlit
 langgraph
 groq
@@ -6,3 +7,4 @@ sentence-transformers
 rank_bm25
 PyMuPDF
 python-dotenv
+pysqlite3-binary; sys_platform == "linux"

@@ -2,6 +2,14 @@
 
 import functools
 import os
+import sys
+
+# Streamlit Cloud's system sqlite is too old for chromadb; swap in pysqlite3 when present.
+try:
+    __import__("pysqlite3")
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ImportError:
+    pass
 
 import chromadb
 import fitz
